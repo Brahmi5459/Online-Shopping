@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+</head>
+
+<body>
+    <h1>Shopping Cart</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Item</th>
+                <th>Price</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody id="cartItems">
+            <!-- Cart items will be dynamically added here -->
+        </tbody>
+    </table>
+
+    <script>
+        // Retrieve items from local storage and display in the cart
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        let cartItemsContainer = document.getElementById('cartItems');
+
+        function renderCart() {
+            // Clear existing items
+            cartItemsContainer.innerHTML = '';
+
+            // Render new items
+            cart.forEach((item, index) => {
+                let row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${item.name}</td>
+                    <td>${item.price}</td>
+                    <td><button onclick="removeItem(${index})">Remove</button></td>
+                `;
+                cartItemsContainer.appendChild(row);
+            });
+        }
+
+        renderCart();
+
+        function removeItem(index) {
+            cart.splice(index, 1);
+            localStorage.setItem('cart', JSON.stringify(cart));
+            renderCart(); // Re-render cart after removing item
+        }
+    </script>
+</body>
+
+</html>

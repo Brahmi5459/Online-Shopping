@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Boxicons -->
+  <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet" />
+
+  <!-- Fontawesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  <!-- Custom StyleSheet -->
+  <link rel="stylesheet" href="./E-Commerce1.css" />
+  <title>ONLINE STORE</title>
+  <style>
+    /* CSS for styling the button */
+    #shopNowButton {
+        background-color: green; /* Green background color */
+        color: white; /* White text color */
+        padding: 10px 20px; /* Padding to adjust button size */
+        border: none; /* No border */
+        border-radius: 5px; /* Rounded corners */
+        cursor: pointer; /* Show pointer cursor on hover */
+    }
+    </style>
+
+<style>
+  /* CSS for styling the button */
+  #contactButton {
+      background-color: blue; /* Blue background color */
+      color: white; /* White text color */
+      padding: 10px 20px; /* Padding to adjust button size */
+      border: none; /* No border */
+      border-radius: 5px; /* Rounded corners */
+      cursor: pointer; /* Show pointer cursor on hover */
+  }
+  </style>
+</head>
+
+<body>
+  
+  <!-- HEADER -->
+
+ <header class="header">
+    <div class="navbar">
+        <div class="navbar-left">
+          <img src="C:\Users\Brahmi\Downloads\alignment company\Online Store.png" width="30%">
+        </div>
+        <div class="navbar-right">
+            <a class="a-element" href="#home">Home</a>
+            <a class="a-element" href="#contact">Contact</a>
+        </div>
+    </div>
+    <div class="home" id="home">
+        <div class="home-left">
+            <h1>TRY OUT THESE LEATHER PRODUCTS</h1>
+          <h2>
+            Up to</br>
+            <span class="dis">30% 
+              Discount</span></br>
+            on This <br />
+            Ugadi Festival Season
+          </h2>
+          <h3>From 15 Mar to 31st Apr</h3></div><br><br>
+
+          <!-- Button to navigate -->
+          <button id="contactButton">Contact E-Commerce Person</button>
+<button id="shopNowButton">Shop Now</button></div>
+
+<script>
+document.getElementById("shopNowButton").addEventListener("click", function() {
+    // Navigate to another page
+    window.location.href = "E-Commerce2.html"; // Replace "another-page.html" with the URL of the page you want to navigate to
+});
+</script>
+
+
+<script>
+document.getElementById("contactButton").addEventListener("click", function() {
+    // Navigate to the contact page
+    window.location.href = "E-Commerce Contact Person.html"; // Replace "contact.html" with the URL of your contact page
+});
+</script>
+  </header>
+</body>
+</html>
